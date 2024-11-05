@@ -1,0 +1,21 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #e6e6e6;
+}
+
+.title {
+    font-family: 'CustomFont', serif;
+    font-size: 2rem;
+    color: #55755b;
+    font-weight: 600;
+    text-align: center;
+}
+
+.firstName, .lastName {
+    position: absolute;
+    opacity: 0; 
+}
