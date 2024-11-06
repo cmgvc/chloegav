@@ -1,6 +1,5 @@
-// src/components/Navbar.js
 import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap'; // Import GSAP for animations
+import { gsap } from 'gsap'; 
 import '../styles/Navbar.css';
 import { Link } from 'react-scroll';
 
@@ -8,10 +7,9 @@ const Navbar = () => {
     const navbarRef = useRef(null);
 
     useEffect(() => {
-        // Animate the navbar when it mounts
         gsap.fromTo(navbarRef.current, 
-            { y: -100, opacity: 0 }, // Start off-screen and transparent
-            { y: 0, opacity: 1, duration: 1, ease: 'power4.out' } // Animate to original position and full opacity
+            { y: -100, opacity: 0 }, 
+            { y: 0, opacity: 1, duration: 1, ease: 'power4.out' } 
         );
     }, []);
 
@@ -20,8 +18,8 @@ const Navbar = () => {
             <ul>
                 <li><Link to="home" smooth={true} duration={500}>Home</Link></li>
                 <li><Link to="about" smooth={true} duration={500}>About</Link></li>
-                <li><Link to="services" smooth={true} duration={500}>Services</Link></li>
-                <li><Link to="contact" smooth={true} duration={500}>Contact</Link></li>
+                <li><Link to="experience" smooth={true} duration={500}>Experience</Link></li>
+                <li><Link to="projects" smooth={true} duration={500}>Projects</Link></li>
             </ul>
         </nav>
     );

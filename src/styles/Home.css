@@ -11,11 +11,19 @@
     font-family: 'CustomFont', serif;
     font-size: 2rem;
     color: #55755b;
-    font-weight: 600;
+    font-weight: 200;
     text-align: center;
 }
 
 .firstName, .lastName {
     position: absolute;
     opacity: 0; 
+}
+
+.typewriter {
+    font-size: 2rem;
+    color: rgb(160, 160, 160);
+    border-right: .15em solid rgb(160, 160, 160);
+    margin-top: -8rem;
+    letter-spacing: .12em;
 }

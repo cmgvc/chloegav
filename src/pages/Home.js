@@ -3,18 +3,19 @@ import '../App.css';
 import '../styles/Home.css';
 import { handleAnimateLastName, handleAnimateFirstName, handleFinalAnimation } from '../animations/handleAnimateHome';
 import Navbar from '../components/Navbar';
+import Type from '../components/Type.js';
 
 function Home() {
     const lastNameRef = useRef(null);
     const firstNameRef = useRef(null);
-    const [isNavbarVisible, setIsNavbarVisible] = useState(false);
+    const [isHomeLoaded, setIsHomeLoaded] = useState(false);
 
     useEffect(() => {
         if (lastNameRef.current) {
             handleAnimateLastName(lastNameRef.current).then(() => {
                 handleAnimateFirstName(firstNameRef.current).then(() => {
                     handleFinalAnimation(firstNameRef.current, lastNameRef.current).then(() => {
-                        setIsNavbarVisible(true);
+                        setIsHomeLoaded(true);
                     });
                 });
             });
@@ -32,7 +33,16 @@ function Home() {
                         Chloe
                     </div>
                 </div>
-                {isNavbarVisible && <Navbar />} 
+                {isHomeLoaded ? (
+                    <div>
+                        <div className="typewriter">
+                            <Type />
+                        </div>
+                        <Navbar />
+                    </div>)
+                    
+                
+                : null} 
             </div>
         </div>
     );
