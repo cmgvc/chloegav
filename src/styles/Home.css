@@ -144,6 +144,36 @@
     transform: translateY(30px); 
 }
 
+.about-me p {
+    font-family: CustomFont, serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.skills {
+    display: flex; 
+}
+.hover-list {
+    list-style-type: none;
+    padding: 0;
+    width: 500px;
+    margin: 20px;
+}
+
+.hover-list li {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.hover-list li:hover {
+    background-color: #55755b;
+    color: white;
+    transform: scale(1.05);
+}
+
 .experience {
     color: #55755b;
     padding: 5rem;

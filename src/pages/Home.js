@@ -58,8 +58,34 @@ function Home() {
                     <div className={`about-me`}>
                         <h1>/about</h1>
                         <p>
-                            I am a full stack developer with a passion for creating beautiful and functional web applications. I have experience with HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, and more. I am a quick learner and am always looking to expand my skill set. I am currently looking for a full-time position as a software engineer.
+                            My name is Chloe and I'm a student at McGill University pursuing a Bachelor of Science.
+                            I'm completing both a major in Software Engineering as well as in Anatomy and Cell Biology.
+                            I'm from Ottawa, Ontario and I'm currently living in Montreal, Quebec. 
+                            I am passionate about web development and am always looking to learn new things. 
+                            <br></br><br></br>
+                            Here are some technologies I have worked with:
                         </p>   
+                        <div className="skills">
+                        <ul class="hover-list">
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>JavaScript</li>
+                            <li>React.js</li>
+                            <li>Node.js</li>
+                            <li>C</li>
+                            <li>HTML/CSS</li>
+
+                        </ul>
+                        <ul class="hover-list">
+                            <li>OCaml</li>
+                            <li>AWS</li>
+                            <li>SQL</li>
+                            <li>NoSQL (MongoDB)</li>
+                            <li>Git</li>
+                            <li>Express</li>
+                            <li>Flask</li>
+                        </ul>
+                    </div>
                     </div>
                     <div className={`experience`}>
                         <h1>/experience</h1>
