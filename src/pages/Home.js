@@ -24,8 +24,8 @@ function Home() {
     }, []);
 
     return (
-        <div>
-            <div className="home">
+        <div className='home-page'>
+            <div className={`home ${isHomeLoaded ? 'isHomeLoaded' : ''}`}>
                 <div className="title">
                     <div ref={lastNameRef} className="lastName">
                         Gavrilovic
@@ -34,7 +34,7 @@ function Home() {
                         Chloe
                     </div>
                 </div>
-            </div>
+            
             {isHomeLoaded ? (
                 <div>
                     <Navbar />
@@ -42,18 +42,18 @@ function Home() {
                         <Type />
                     </div>
                     <div className='home-container'>
-                    <div className="name-tag-container">
-                        <div className="name-tag-card">
-                            <div className="name-tag-front">
-                                <div className="name-tag-header">Hi my name is</div>
-                                <p>CHLOE</p>
-                            </div>
+                        <div className="name-tag-container">
+                            <div className="name-tag-card">
+                                <div className="name-tag-front">
+                                    <div className="name-tag-header">Hi my name is</div>
+                                    <p>CHLOE</p>
+                                </div>
 
-                            <div className="name-tag-back">
-                                <img src={laptopImg}></img>
+                                <div className="name-tag-back">
+                                    <img src={laptopImg}></img>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                     <div className={`about-me`}>
                         <h1>/about</h1>
@@ -69,6 +69,7 @@ function Home() {
                         </div>
                 </div>
             ) : null}
+            </div>
         </div>
     );
 }
