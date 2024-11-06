@@ -53,7 +53,7 @@ function Home() {
                         <div className="name-tag-container">
                             <div className="name-tag-card">
                                 <div className="name-tag-front">
-                                    <div className="name-tag-header">Hi my name is</div>
+                                    <div className="name-tag-header">Hello my name is</div>
                                     <p>CHLOE</p>
                                 </div>
 
@@ -98,7 +98,7 @@ function Home() {
                                 Some of my hobbies outside of tech include swimming, reading, finding new music, and learning about cars. 
                         </p>
                         <div class="fun-fact-box">
-                            <p class="initial-text">Hover over for a fun fact</p>
+                            <p class="initial-text"><strong>Fun fact</strong></p>
                             <p class="fun-fact-text">I was a high performance synchronized swimmer for 12 years and represented Canada at the Junior Pan American Games in 2019!</p>
                         </div>
 
@@ -120,7 +120,7 @@ function Home() {
                                         padding: '6px 12px',
                                     },
                                     '& .Mui-selected': {
-                                        color: '#55755b', 
+                                        color: '#55755b !important', 
                                         fontWeight: 'bold',
                                     },
                                     '& .MuiTabs-indicator': {
@@ -199,17 +199,9 @@ function Home() {
                             </Box>
                             </Box>
                     </div>
-                    <div className={`experience`}>
-                        <h1>/experience</h1>
-                        <p>
-                            I have experience with HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, and more. I have created several web applications, including a weather app, a chat app, and a portfolio website. I am a quick learner and am always looking to expand my skill set. I am currently looking for a full-time position as a software engineer.
-                        </p>
-                    </div>
-                    <div className={`experience`}>
-                        <h1>/experience</h1>
-                        <p>
-                            I have experience with HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, and more. I have created several web applications, including a weather app, a chat app, and a portfolio website. I am a quick learner and am always looking to expand my skill set. I am currently looking for a full-time position as a software engineer.
-                        </p>
+                    <div id="projects" className={`projects`}>
+                        <h1>/projects</h1>
+                        
                     </div>
                 </div>
             ) : null}
