@@ -2,6 +2,11 @@
     background-color: #f8f8f8;
 }
 
+body, .home {
+    overflow-x: hidden;
+}
+
+
 .home {
     display:inline-block;
     flex-direction: column;
@@ -228,5 +233,60 @@
     }
     to {
         opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 1rem;
+        flex-direction: column;
+    }
+
+    .firstName {
+        margin-left: 39em;
+    }
+
+    .lastName {
+        margin-top: 10vh;
+        margin-left: 9vw;
+    }
+
+    .typewriter {
+        font-size: 1.3rem;
+        margin-top: 35vh;
+    }
+
+    .hover-list li {
+        width: 100%;
+        max-width: none;
+    }
+
+    .name-tag-front,
+    .name-tag-back {
+        scale: 1.7;
+        margin-top: -2em;
+    }
+
+    .about-me {
+        margin-left: 3rem;
+        margin-right: 2rem;
+        margin-top: 6em;
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hover-list {
+        width: 20em;
+        text-align: center;
     }
 }
