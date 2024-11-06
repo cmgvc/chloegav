@@ -66,7 +66,19 @@ function Home() {
                         <p>
                             I have experience with HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, and more. I have created several web applications, including a weather app, a chat app, and a portfolio website. I am a quick learner and am always looking to expand my skill set. I am currently looking for a full-time position as a software engineer.
                         </p>
-                        </div>
+                    </div>
+                    <div className={`experience`}>
+                        <h1>/experience</h1>
+                        <p>
+                            I have experience with HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, and more. I have created several web applications, including a weather app, a chat app, and a portfolio website. I am a quick learner and am always looking to expand my skill set. I am currently looking for a full-time position as a software engineer.
+                        </p>
+                    </div>
+                    <div className={`experience`}>
+                        <h1>/experience</h1>
+                        <p>
+                            I have experience with HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, and more. I have created several web applications, including a weather app, a chat app, and a portfolio website. I am a quick learner and am always looking to expand my skill set. I am currently looking for a full-time position as a software engineer.
+                        </p>
+                    </div>
                 </div>
             ) : null}
             </div>
