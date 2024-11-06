@@ -227,6 +227,21 @@ body, .home {
     transform: translateY(30px); 
 }
 
+.experience p {
+    font-family: CustomFont, serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.tab-content {
+    text-align: center;
+}
+
+.tab-content h3 {
+    color: #7d8c81;
+    font-weight: 400;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -235,6 +250,8 @@ body, .home {
         opacity: 1;
     }
 }
+
+
 
 @media (max-width: 768px) {
     .home-container {
