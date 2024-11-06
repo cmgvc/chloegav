@@ -21,9 +21,138 @@
 }
 
 .typewriter {
+    text-align: center;
     font-size: 2rem;
     color: rgb(160, 160, 160);
-    border-right: .15em solid rgb(160, 160, 160);
-    margin-top: -8rem;
+    margin-top: -29rem;
     letter-spacing: .12em;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    animation: fadeIn 1.5s forwards;
+}
+
+.name-tag-container {
+    perspective: 1000px; 
+    margin-top: 7rem;
+    animation: tiltAnimation 3s ease-in-out infinite; 
+}
+
+.name-tag-card {
+    width: 250px; 
+    height: 100px; 
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    display: inline-block;
+}
+
+.name-tag-container:hover .name-tag-card {
+    transform: rotateY(180deg) scale(1) scaleY(1.3); 
+}
+
+.name-tag-container:hover  {
+    animation: none;
+}
+
+@keyframes tiltAnimation {
+    0% {
+        transform: rotateZ(-5deg);
+    }
+    50% {
+        transform: rotateZ(5deg); 
+    }
+    100% {
+        transform: rotateZ(-5deg); 
+    }
+}
+
+
+.name-tag-front,
+.name-tag-back {
+    position: absolute;
+    scale: 1.8;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.name-tag-front p {
+    font-family: 'NameTagFont';
+    margin: 0;
+    padding: 5px;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.name-tag-front {
+    display: inline-block;
+    width: 190px;
+    background-color: #e6e6e6;
+    color: #55755b;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px;
+    animation: rotateBackAndForth 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #55755b;
+}
+
+.name-tag-header {
+    background-color: #55755b;
+    color: #e6e6e6; 
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 5px;
+    width: 95%;
+}
+
+.name-tag-back {
+    background-color: #fff;
+    transform: rotateY(180deg) scaleY(1.3); 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.name-tag-back img {
+    width: 100%; 
+    height: 100%;
+    object-fit: fill; 
+    border-radius: 5px;
+}
+
+.about-me {
+    opacity: 0;
+    color: #55755b;
+    padding: 5rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    animation: fadeIn 1.5s forwards;
+    transform: translateY(30px); 
+}
+
+.experience {
+    color: #55755b;
+    padding: 5rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: -3rem;
+    animation: fadeIn 1.5s forwards;
+    transform: translateY(30px); 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
