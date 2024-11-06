@@ -69,7 +69,6 @@ function Home() {
                             My name is Chloe and I'm a student at McGill University pursuing a Bachelor of Science.
                             I'm completing both a major in Software Engineering as well as in Anatomy and Cell Biology.
                             I'm from Ottawa, Ontario and I'm currently living in Montreal, Quebec. 
-                            I am passionate about web development and am always looking to learn new things. 
                             <br></br><br></br>
                             Here are some technologies I have worked with:
                         </p>   
@@ -105,9 +104,7 @@ function Home() {
                     </div>
                     <div id='experience' className={`experience`}>
                         <h1>/experience</h1>
-                        <p>
-                            I have experience with HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, and more. I have created several web applications, including a weather app, a chat app, and a portfolio website. I am a quick learner and am always looking to expand my skill set. I am currently looking for a full-time position as a software engineer.
-                        </p>
+                        
                         <Box sx={{ width: '100%', borderBottom: 1, borderColor: 'divider' }}>
                             <Tabs
                                 value={value}
