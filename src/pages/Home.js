@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import '../App.css';
 import '../styles/Home.css';
 import { handleAnimateLastName, handleAnimateFirstName, handleFinalAnimation } from '../animations/handleAnimateHome';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar.js';
 import Type from '../components/Type.js';
 import laptopImg from "../assets/headshot.png";
 import { Tabs, Tab, Box } from '@mui/material'; 

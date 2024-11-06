@@ -1,5 +1,4 @@
 import { gsap } from 'gsap';
-import anime from 'animejs';
 
 export const handleAnimateLastName = (lastNameElement) => {
     return new Promise((resolve) => {
