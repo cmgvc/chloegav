@@ -136,10 +136,9 @@
 .about-me {
     opacity: 0;
     color: #55755b;
-    padding: 5rem;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    margin-top: 6em;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 12em;
     animation: fadeIn 1.5s forwards;
     transform: translateY(30px); 
 }
@@ -170,16 +169,55 @@
 
 .hover-list li:hover {
     background-color: #55755b;
+    font-weight: bold;
     color: white;
     transform: scale(1.05);
 }
 
+.fun-fact-box {
+    position: relative;
+    border: 1px solid #55755b;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+    transition: all 0.3s ease;
+}
+
+.initial-text {
+    font-size: 1.2rem;
+    color: #55755b;
+    margin: 0;
+}
+
+.fun-fact-text {
+    display: none; 
+    font-size: 1.5rem;
+    color: #55755b;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.fun-fact-box:hover {
+    background-color: #55755b;
+    color: white;
+    transform: scale(1.1);
+}
+
+.fun-fact-box:hover .initial-text {
+    display: none; 
+}
+
+.fun-fact-box:hover .fun-fact-text {
+    display: block;
+    color: #fff;
+}
+
 .experience {
     color: #55755b;
-    padding: 5rem;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    margin-top: -3rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 3rem;
     animation: fadeIn 1.5s forwards;
     transform: translateY(30px); 
 }

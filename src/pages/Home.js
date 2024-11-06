@@ -66,26 +66,34 @@ function Home() {
                             Here are some technologies I have worked with:
                         </p>   
                         <div className="skills">
-                        <ul class="hover-list">
-                            <li>Python</li>
-                            <li>Java</li>
-                            <li>JavaScript</li>
-                            <li>React.js</li>
-                            <li>Node.js</li>
-                            <li>C</li>
-                            <li>HTML/CSS</li>
+                            <ul class="hover-list">
+                                <li>Python</li>
+                                <li>Java</li>
+                                <li>JavaScript</li>
+                                <li>React.js</li>
+                                <li>Node.js</li>
+                                <li>C</li>
+                                <li>HTML/CSS</li>
 
-                        </ul>
-                        <ul class="hover-list">
-                            <li>OCaml</li>
-                            <li>AWS</li>
-                            <li>SQL</li>
-                            <li>NoSQL (MongoDB)</li>
-                            <li>Git</li>
-                            <li>Express</li>
-                            <li>Flask</li>
-                        </ul>
-                    </div>
+                            </ul>
+                            <ul class="hover-list">
+                                <li>OCaml</li>
+                                <li>AWS</li>
+                                <li>SQL</li>
+                                <li>NoSQL (MongoDB)</li>
+                                <li>Git</li>
+                                <li>Express</li>
+                                <li>Flask</li>
+                            </ul>
+                        </div>
+                        <p> 
+                                Some of my hobbies outside of tech include swimming, reading, finding new music, and learning about cars. 
+                        </p>
+                        <div class="fun-fact-box">
+                            <p class="initial-text">Hover over for a fun fact</p>
+                            <p class="fun-fact-text">I was a high performance synchronized swimmer for 12 years and represented Canada at the Junior Pan American Games in 2019!</p>
+                        </div>
+
                     </div>
                     <div className={`experience`}>
                         <h1>/experience</h1>
