@@ -168,9 +168,8 @@ function Home() {
                                     <p>
                                     As a <strong>Software Developer</strong> at the <strong>McGill Biomechanics Club</strong>,
                                      I developed a <strong>full-stack platform</strong> that serves as a user portal for both patients 
-                                     and doctors. The platform integrates real-time sensor EMG data to display results and trends in a 
-                                     <strong>user-friendly</strong> way. This system enables patients and healthcare professionals to track 
-                                     and analyze muscle activity and recovery in a clear, accessible format. I worked on both the frontend 
+                                     and doctors. The platform integrates real-time sensor EMG data to display results in a  <strong>user-friendly</strong> way and support exoskeleton testing for tremor suppression and tremor monitoring. This system enables patients and healthcare professionals to track 
+                                    muscle activity, analyze trends, and monitor progress in a clear, accessible format. I worked on both the frontend 
                                      and backend to ensure seamless integration and a smooth user experience.
                                      <br></br><br></br>
                                      I was involved in the <strong>full software development life cycle</strong>, including design, development, 
