@@ -4,7 +4,7 @@ export const handleAnimateLastName = (lastNameElement) => {
     return new Promise((resolve) => {
         gsap.fromTo(
             lastNameElement,
-            { x: -80, opacity: 0, y: 1000 }, 
+            { x: -100, opacity: 0, y: 1000 }, 
             {
                 opacity: 1,
                 y: 350,
@@ -12,7 +12,7 @@ export const handleAnimateLastName = (lastNameElement) => {
                 ease: 'power4.out',
                 onComplete: () => {
                     gsap.to(lastNameElement, {
-                        x: -5, 
+                        x: -40, 
                         duration: 0.5,
                         ease: 'power4.out',
                         onComplete: resolve,
@@ -27,10 +27,10 @@ export const handleAnimateFirstName = (firstNameElement) => {
     return new Promise((resolve) => {
         gsap.fromTo(
             firstNameElement,
-            { x: -100, opacity: 0, y: 0 }, 
+            { x: -140, opacity: 0, y: 0 }, 
             {
                 opacity: 1,
-                x: -100,
+                x: -140,
                 y: 350,
                 duration: 1,
                 ease: 'power4.out',
