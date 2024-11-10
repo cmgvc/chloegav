@@ -7,6 +7,7 @@ import Type from '../components/Type.js';
 import laptopImg from "../assets/headshot.png";
 import { Tabs, Tab, Box } from '@mui/material'; 
 import GitHub from '@mui/icons-material/GitHub';
+import Footer from '../components/Footer.js';
 
 function Home() {
     const lastNameRef = useRef(null);
@@ -36,10 +37,10 @@ function Home() {
         <div className='home-page'>
             <div className={`home ${isHomeLoaded ? 'isHomeLoaded' : ''}`}>
                 <div className="title">
-                    <div ref={lastNameRef} className="lastName">
+                    <div ref={lastNameRef} className={`lastName ${isHomeLoaded ? 'isHomeLoaded' : ''}`}>
                         Gavrilovic
                     </div>
-                    <div ref={firstNameRef} className="firstName">
+                    <div ref={firstNameRef} className={`firstName ${isHomeLoaded ? 'isHomeLoaded' : ''}`}>
                         Chloe
                     </div>
                 </div>
@@ -69,7 +70,7 @@ function Home() {
                         <p>
                             My name is Chloe and I'm a student at McGill University pursuing a Bachelor of Science.
                             I'm completing both a major in Software Engineering as well as in Anatomy and Cell Biology.
-                            I'm from Ottawa, Ontario and I'm currently living in Montreal, Quebec. 
+                            I'm from Ottawa, Ontario and am currently living in Montreal, Quebec. 
                             <br></br><br></br>
                             Here are some technologies I have worked with:
                         </p>   
@@ -227,6 +228,7 @@ function Home() {
                             
                         </div>
                     </div>
+                    <Footer />
                 </div>
             ) : null}
             </div>

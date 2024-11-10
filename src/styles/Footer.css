@@ -1,0 +1,10 @@
+.footer {
+    display: flex;
+    height: 20vh;
+    margin-top: 10vh;
+    justify-content: center;
+    background-color: #869b84;
+    color: white;
+    font-family: 'CustomFont', serif;
+    align-items: center;
+}

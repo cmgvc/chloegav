@@ -1,5 +1,6 @@
 .home-page, .home {
     background-color: #f8f8f8;
+    height: 100vh;
 }
 
 body, .home {
@@ -12,7 +13,6 @@ body, .home {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    height: 500vh;
 }
 
 .title {
@@ -27,6 +27,20 @@ body, .home {
     position: absolute;
     /* margin-left: 50vw; */
     opacity: 0; 
+}
+
+.isHomeLoaded .firstName, .isHomeLoaded .lastName{
+    position: relative;
+    margin-right: 90vw;
+}
+
+.isHomeLoaded .firstName {
+    margin-top: -40px;
+    margin-left: -4vw;
+}
+
+.isHomeLoaded .lastName {
+    margin-top: 0vh;
 }
 
 .typewriter {
