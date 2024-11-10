@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar.js';
 import Type from '../components/Type.js';
 import laptopImg from "../assets/headshot.png";
 import { Tabs, Tab, Box } from '@mui/material'; 
+import GitHub from '@mui/icons-material/GitHub';
 
 function Home() {
     const lastNameRef = useRef(null);
@@ -197,7 +198,34 @@ function Home() {
                     </div>
                     <div id="projects" className={`projects`}>
                         <h1>/projects</h1>
-                        
+                        <div className="project-cards">
+                            <div className="project-card">
+                                <a href="https://we-are-fit.vercel.app/" target="_blank" rel="noreferrer">
+                                    <h3>We Are Fit Web Application</h3>
+                                    <h4>October 2024</h4>
+                                </a>
+                                <p>
+                                    WeAreFit is a web-based fitness app designed to engage users in daily fitness challenges tailored to their desired difficulty levels. The platform encourages users to track their progress and participate in challenges either solo or with friends. Key features include leaderboards and a gamified experience that motivates users to achieve their fitness goals. Built with React.js for the frontend and Node.js with Express and MongoDB for the backend, WeAreFit leverages Vercel and Render for deployment, ensuring a seamless and scalable user experience.
+                                </p>
+                                <a href="https://github.com/cmgvc/WeAreFit" target="_blank" rel="noreferrer">
+                                    <GitHub />
+                                </a>
+                            </div>
+                            <div className="project-card">
+                            <a href="https://chloegav.vercel.app/" target="_blank" rel="noreferrer">
+                                    <h3>Personal Portfolio</h3>
+                                    <h4>November 2024</h4>
+                                </a>
+                                <p>
+                                    Developed a portfolio website using React, HTML, and CSS. Deployed using Vercel.
+                                    Showcases academic experience, work experience, personal projects, and skills in user-friendly and interactive design.
+                                </p>
+                                <a href="https://github.com/cmgvc/chloegav" target="_blank" rel="noreferrer">
+                                    <GitHub />
+                                </a>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
             ) : null}
