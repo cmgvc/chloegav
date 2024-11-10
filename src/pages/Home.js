@@ -68,7 +68,7 @@ function Home() {
                     <div id="about" className={`about-me`}>
                         <h1>/about</h1>
                         <p>
-                            My name is Chloe and I'm a student at McGill University pursuing a Bachelor of Science.
+                            My name is Chloe and I'm a student at McGill University pursuing a Bachelor of Science with an expected graduation in 2025.
                             I'm completing both a major in Software Engineering as well as in Anatomy and Cell Biology.
                             I'm from Ottawa, Ontario and am currently living in Montreal, Quebec. 
                             <br></br><br></br>
