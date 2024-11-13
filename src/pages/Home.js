@@ -35,7 +35,7 @@ function Home() {
 
     return (
         <div className='home-page'>
-            <div className={`home ${isHomeLoaded ? 'isHomeLoaded' : ''}`}>
+            <div className={`home ${isHomeLoaded ? 'isHomeLoaded' : ''}`} id="home">
                 <div className="title">
                     <div ref={lastNameRef} className={`lastName ${isHomeLoaded ? 'isHomeLoaded' : ''}`}>
                         Gavrilovic
@@ -75,19 +75,20 @@ function Home() {
                             Here are some technologies I have worked with:
                         </p>   
                         <div className="skills">
-                            <ul class="hover-list">
+                            <ul className="hover-list">
                                 <li>Python</li>
                                 <li>Java</li>
                                 <li>JavaScript</li>
                                 <li>React.js</li>
                                 <li>Node.js</li>
+                                <li>Three.js</li>
+                                <li>Next.js</li>
                                 <li>C</li>
-                                <li>HTML/CSS</li>
-
                             </ul>
-                            <ul class="hover-list">
+                            <ul className="hover-list">
+                             <li>HTML/CSS</li>
                                 <li>OCaml</li>
-                                <li>AWS</li>
+                                <li>AWS (Lambda, EventBridge, DynamoDB, S3, IAM)</li>
                                 <li>SQL</li>
                                 <li>NoSQL (MongoDB)</li>
                                 <li>Git</li>
@@ -98,13 +99,13 @@ function Home() {
                         <p> 
                                 Some of my hobbies outside of tech include swimming, reading, finding new music, and learning about cars. 
                         </p>
-                        <div class="fun-fact-box">
-                            <p class="initial-text"><strong>Fun fact</strong></p>
-                            <p class="fun-fact-text">I was a high performance synchronized swimmer for 12 years and represented Canada at the Junior Pan American Games in 2019!</p>
+                        <div className="fun-fact-box">
+                            <p className="initial-text"><strong>Fun fact</strong></p>
+                            <p className="fun-fact-text">I was a high performance synchronized swimmer for 12 years and represented Canada at the Junior Pan American Games in 2019!</p>
                         </div>
 
                     </div>
-                    <div id='experience' className={`experience`}>
+                    <div id='experience' className='experience'>
                         <h1>/experience</h1>
                         
                         <Box sx={{ width: '100%', borderBottom: 1, borderColor: 'divider' }}>
