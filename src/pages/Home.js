@@ -142,10 +142,12 @@ function Home() {
                                         At Amazon, I developed a <strong>full-stack platform</strong> for the <strong>Ordering Accounting team</strong>--used by over 100 Amazon engineers--that automated the execution of a service to
                                         redrive accounting workflows triggered by financially significant events. 
                                         This included building a <strong>responsive React website</strong> from scratch and integrating other financial services into the backend to seamlessly handle accounting events.
+                                        I contributed to CI/CD pipelines for efficient deployment and integration testing and to ensure rapid releases.
                                          <br></br><br></br>
                                          This experience allowed me to enhance both frontend and backend development skills, leveraging <strong>AWS 
-                                            Lambda, DynamoDB, and EventBridge</strong>, and collaborating with cross-functional teams to create operational improvements.
-                                            Throughout the project, I followed best practices for the <strong>full software development life cycle</strong>, including coding standards, code reviews, source control management, build processes, testing, and operations.
+                                            Lambda, S3, DynamoDB, and EventBridge</strong>, and collaborating with cross-functional teams to create operational improvements.
+                                            Throughout the project, I followed <strong>Agile methodologies</strong>, participating in sprint activities and iterative development, 
+                                            while adhering to best practices for the <strong>full software development life cycle</strong>, including code reviews, source control, testing, and operations.
                                 </p></div>}
                                 {value === 1 && <div>
                                     <h2>Undergraduate Course Assistant</h2>
@@ -226,7 +228,16 @@ function Home() {
                                     <GitHub />
                                 </a>
                             </div>
-                            
+                            <div className="project-card">
+                            <a href="" target="_blank" rel="noreferrer">
+                                    <h3>Full-Stack Real-Time Data Portal</h3>
+                                    <h4>Fall 2024</h4>
+                                </a>
+                                <p>
+                                Built a full-stack platform displaying real-time EMG sensor data for exoskeleton testing and tremor monitoring. Frontend built using React.js and TypeScript, backend using Flask.
+                                Optimized data relay, ensuring a scalable and user-centric interface for healthcare professionals and patients.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <Footer />
