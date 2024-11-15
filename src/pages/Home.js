@@ -21,22 +21,18 @@ function Home() {
 
     useEffect(() => {
         if (lastNameRef.current) {
-            handleAnimateLastName(lastNameRef.current).then(() => {
-                handleAnimateFirstName(firstNameRef.current).then(() => {
-                    handleFinalAnimation(firstNameRef.current, lastNameRef.current).then(() => {
-                        setIsHomeLoaded(true);
-                    });
+            handleAnimateLastName(lastNameRef.current, firstNameRef.current).then(() => {
+                handleFinalAnimation(firstNameRef.current, lastNameRef.current).then(() => {
+                    setIsHomeLoaded(true);
                 });
             });
         }
     }, []);
 
-    
-
     return (
-        <div className='home-page'>
-            <div className={`home ${isHomeLoaded ? 'isHomeLoaded' : ''}`} id="home">
-                <div className="title">
+        <div className='homepage' id="home-page">
+            <div className={`home ${isHomeLoaded ? 'isHomeLoaded' : ''}`}>
+                <div className="animation-title">
                     <div ref={lastNameRef} className={`lastName ${isHomeLoaded ? 'isHomeLoaded' : ''}`}>
                         Gavrilovic
                     </div>
@@ -46,8 +42,17 @@ function Home() {
                 </div>
             
             {isHomeLoaded ? (
-                <div>
+                <div id='homepage'>
                     <Navbar />
+                    <div className="title">
+                        <div className="first">
+                            Chloe
+                        </div>
+                        &nbsp;
+                        <div className="last">
+                            Gavrilovic
+                        </div>
+                    </div>
                     <div className="typewriter">
                         <Type />
                     </div>

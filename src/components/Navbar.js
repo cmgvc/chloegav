@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from "gsap";
 import '../styles/Navbar.css';
-import { Link } from 'react-scroll';
+import { ScrollLink } from 'react-scroll';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
@@ -18,10 +18,27 @@ const Navbar = () => {
     return (
         <nav ref={navbarRef} id="navbar">
             <ul>
-                <li><Link to="home" smooth={true} duration={500}>Home</Link></li>
-                <li><Link to="about" smooth={true} duration={500}>About</Link></li>
-                <li><Link to="experience" smooth={true} duration={500}>Experience</Link></li>
-                <li><Link to="projects" smooth={true} duration={500}>Projects</Link></li>
+                <li><p 
+                    onClick={() => {
+                        const anchor_home = document.querySelector('#homepage')
+                        anchor_home.scrollIntoView({ behavior: 'smooth' })
+                    }}>Home</p></li>
+                <p 
+
+                    onClick={() => {
+                        const anchor = document.querySelector('#about')
+                        anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                    }}>About</p>
+                <p 
+                    onClick={() => {
+                        const element = document.querySelector('#experience')
+                        element.scrollIntoView({ behavior: 'smooth'})
+                    }}>Experience</p>
+                <p 
+                    onClick={() => {
+                        const anchor = document.querySelector('#projects')
+                        anchor?.scrollIntoView({ behavior: 'smooth'})
+                    }}>Projects</p>
             </ul>
             <div className='icons'> 
                 <a href="https://www.linkedin.com/in/chloe-gavrilovic-b911551b4/" target="_blank" rel="noreferrer">

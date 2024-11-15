@@ -1,53 +1,47 @@
-.home-page, .home {
+.homepage {
     background-color: #f8f8f8;
     height: 100vh;
-}
-
-body, .home {
     overflow-x: hidden;
 }
 
-
-.home {
-    display:inline-block;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-}
-
 .title {
+    display: flex;
     font-family: 'CustomFont', serif;
-    font-size: 2rem;
+    font-size: 10rem;
     color: #55755b;
-    font-weight: 200;
+    font-weight: 500;
+    margin-top: 5vh;
+    justify-content: center;
     text-align: center;
+    animation: fadeIn 2s forwards;
 }
 
-.firstName, .lastName {
-    position: absolute;
-    /* margin-left: 50vw; */
-    opacity: 0; 
+.animation-title {
+    font-family: 'CustomFont', serif;
+    font-size: 10rem;
+    color: #55755b;
+    font-weight: 500;
+    justify-content: center;
+    display: flex;
+}
+
+.firstName {
+    font-size: 2rem;
+}
+
+.lastName {
+    font-size: 2rem;
 }
 
 .isHomeLoaded .firstName, .isHomeLoaded .lastName{
-    position: relative;
-    margin-right: 90vw;
-}
-
-.isHomeLoaded .firstName {
-    margin-top: -40px;
-    margin-left: -4vw;
-}
-
-.isHomeLoaded .lastName {
-    margin-top: 0vh;
+    display: none;
 }
 
 .typewriter {
     text-align: center;
     font-size: 2rem;
     color: rgb(160, 160, 160);
-    margin-top: 7em;
+    margin-top: 1em;
     letter-spacing: .12em;
 }
 

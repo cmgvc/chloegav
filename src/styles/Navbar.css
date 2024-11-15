@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     right: 0;
-    padding: 10px 20px; 
+    padding: 0;
     z-index: 10; 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
 }
@@ -15,14 +15,10 @@
     justify-content: center;
     padding: 0;
     margin: 0;
-    margin-top: 3px;
 }
 
-#navbar li {
-    margin: 0 15px; 
-}
-
-#navbar a {
+#navbar p, a {
+    margin: 15px 15px;
     text-decoration: none; 
     color: #55755b;
     font-weight: bold;
@@ -30,16 +26,18 @@
     cursor: pointer;
 }
 
-#navbar a:hover {
+#navbar p:hover, a:hover {
     color: #bdbdbd; 
 }
 
 .icons {
     display: flex; 
     justify-content: end;
-    margin-top: -20px;
+    margin-top: -33px;
+    margin-bottom: 10px;
+    margin-right: 20px;
 }
 
 .icons a {
-    margin: 0 5px; 
+    margin: 0 6px; 
 }
