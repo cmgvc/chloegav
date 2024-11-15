@@ -6,6 +6,7 @@ function Footer() {
     <div className="footer">
         <footer>
             <p>2024 Chloe Gavrilovic</p>
+            <p>Reach me at:<a href="mailto:me@chloegav.com" target="_blank" rel="noreferrer">me@chloegav.com</a></p>
         </footer>
     </div>
   )
