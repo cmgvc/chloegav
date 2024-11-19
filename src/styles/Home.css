@@ -12,7 +12,7 @@
 .title {
     display: flex;
     font-family: 'CustomFont2', serif;
-    font-size: 15rem;
+    font-size: 17rem;
     color: #55755b;
     font-weight: 500;
     letter-spacing: -13px;
@@ -21,17 +21,18 @@
     white-space: nowrap; 
     animation: fadeIn 2s forwards, slide 20s linear infinite;
     margin-right: 2rem;
+    margin-top: 1rem;
 }
 
 .third-title {
-    margin-top: -8rem;
+    margin-top: -7rem;
     animation: fadeIn-last 2s forwards, slide 20s linear infinite;
 }
 
 .title-right {
     display: flex;
     font-family: 'CustomFont2', serif;
-    font-size: 15rem;
+    font-size: 17rem;
     color: #55755b;
     font-weight: 500;
     letter-spacing: -13px;
@@ -41,7 +42,7 @@
     animation: fadeIn-right 2s forwards, slide-right 15s linear infinite;
     margin-right: 2rem;
     opacity: 0.5;
-    margin-top: -8rem;
+    margin-top: -6rem;
 }
 
 @keyframes fadeIn {
