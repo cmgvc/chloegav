@@ -307,11 +307,19 @@ function Home() {
                         <div className="project-cards">
                             <div className="project-card">
                                 <a href="https://we-are-fit.vercel.app/" target="_blank" rel="noreferrer">
-                                    <h3>We Are Fit Web Application</h3>
+                                    <h3>We Are Fit AI-Powered Application</h3>
                                     <h4>October 2024</h4>
                                 </a>
                                 <p>
-                                    WeAreFit is a web-based fitness app designed to engage users in daily fitness challenges tailored to their desired difficulty levels. The platform encourages users to track their progress and participate in challenges either solo or with friends. Key features include leaderboards and a gamified experience that motivates users to achieve their fitness goals. Built with React.js for the frontend and Node.js with Express and MongoDB for the backend, WeAreFit leverages Vercel and Render for deployment, ensuring a seamless and scalable user experience.
+                                WeAreFit is an AI-powered web-based fitness app, driven by Gemini Google AI, 
+                                designed to engage users in personalized daily fitness challenges tailored to 
+                                their desired difficulty levels. The app's daily fitness challenges are generated 
+                                by the AI to ensure they are relevant and engaging for each user. Users can track 
+                                their progress and participate in challenges, either solo or with friends, while
+                                 enjoying gamified features like leaderboards to motivate goal achievement. Built with 
+                                 React.js for the frontend and Node.js with Express and MongoDB for the backend, WeAreFit 
+                                 leverages Vercel and Render for deployment, ensuring a seamless, scalable, and intelligent 
+                                 user experience.
                                 </p>
                                 <a href="https://github.com/cmgvc/WeAreFit" target="_blank" rel="noreferrer">
                                     <GitHub />
