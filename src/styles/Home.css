@@ -154,7 +154,7 @@
     margin-right: 2rem;
     font-size: 2.5rem;
     color: rgb(160, 160, 160);
-    margin-top: -1em;
+    margin-top: 0em;
     letter-spacing: .12em;
 }
 
@@ -262,7 +262,7 @@
     color: #55755b;
     margin-left: 10rem;
     margin-right: 10rem;
-    margin-top: 3em;
+    margin-top: 2em;
     animation: fadeIn 1.5s forwards;
     transform: translateY(30px); 
 }
