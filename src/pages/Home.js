@@ -5,19 +5,30 @@ import { handleAnimateLastName, handleAnimateFirstName, handleFinalAnimation } f
 import Navbar from '../components/Navbar.js';
 import Type from '../components/Type.js';
 import laptopImg from "../assets/headshot.png";
-import { Tabs, Tab, Box } from '@mui/material'; 
+import { Tabs, Tab, Box, IconButton } from '@mui/material'; 
 import GitHub from '@mui/icons-material/GitHub';
 import Footer from '../components/Footer.js';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 function Home() {
     const lastNameRef = useRef(null);
     const firstNameRef = useRef(null); 
     const [isHomeLoaded, setIsHomeLoaded] = useState(false);
     const [value, setValue] = useState(0);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
-      };
+    };
+
+    const handleNext = () => {
+        setValue((prevValue) => (prevValue + 1) % 5); 
+    };
+
+    const handlePrev = () => {
+        setValue((prevValue) => (prevValue === 0 ? 4 : prevValue - 1));
+    };
 
     useEffect(() => {
         if (lastNameRef.current) {
@@ -27,6 +38,12 @@ function Home() {
                 });
             });
         }
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     return (
@@ -44,32 +61,97 @@ function Home() {
             {isHomeLoaded ? (
                 <div id='homepage'>
                     <Navbar />
-                    <div className="title">
-                        <div className="first">
-                            Chloe
+                    <div className="title-container">
+                        <div className="title">
+                            <div className="first">
+                                CHLOE
+                            </div>
+                            &nbsp;
+                            <div className="last">
+                                GAVRILOVIC
+                            </div>
                         </div>
-                        &nbsp;
-                        <div className="last">
-                            Gavrilovic
+                        <div className="title">
+                            <div className="first">
+                                CHLOE
+                            </div>
+                            &nbsp;
+                            <div className="last">
+                                GAVRILOVIC
+                            </div>
+                        </div>
+                        <div className="title">
+                            <div className="first">
+                                CHLOE
+                            </div>
+                            &nbsp;
+                            <div className="last">
+                                GAVRILOVIC
+                            </div>
+                        </div>
+                    </div>
+                    <div className="title-container">
+                        <div className="title-right">
+                            <div className="first">
+                                CHLOE
+                            </div>
+                            &nbsp;
+                            <div className="last">
+                                GAVRILOVIC
+                            </div>
+                        </div>
+                        <div className="title-right">
+                            <div className="first">
+                                CHLOE
+                            </div>
+                            &nbsp;
+                            <div className="last">
+                                GAVRILOVIC
+                            </div>
+                        </div>
+                        <div className="title-right">
+                            <div className="first">
+                                CHLOE
+                            </div>
+                            &nbsp;
+                            <div className="last">
+                                GAVRILOVIC
+                            </div>
+                        </div>
+                    </div>
+                    <div className="title-container third-title">
+                        <div className="title">
+                            <div className="first">
+                                CHLOE
+                            </div>
+                            &nbsp;
+                            <div className="last">
+                                GAVRILOVIC
+                            </div>
+                        </div>
+                        <div className="title">
+                            <div className="first">
+                                CHLOE
+                            </div>
+                            &nbsp;
+                            <div className="last">
+                                GAVRILOVIC
+                            </div>
+                        </div>
+                        <div className="title">
+                            <div className="first">
+                                CHLOE
+                            </div>
+                            &nbsp;
+                            <div className="last">
+                                GAVRILOVIC
+                            </div>
                         </div>
                     </div>
                     <div className="typewriter">
                         <Type />
                     </div>
-                    <div className='home-container'>
-                        <div className="name-tag-container">
-                            <div className="name-tag-card">
-                                <div className="name-tag-front">
-                                    <div className="name-tag-header">Hello my name is</div>
-                                    <p>CHLOE</p>
-                                </div>
-
-                                <div className="name-tag-back">
-                                    <img src={laptopImg}></img>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div id="about" className={`about-me`}>
                         <h1>/about</h1>
                         <p>
@@ -108,101 +190,115 @@ function Home() {
                             <p className="initial-text"><strong>Fun fact</strong></p>
                             <p className="fun-fact-text">I was a high performance synchronized swimmer for 12 years and represented Canada at the Junior Pan American Games in 2019!</p>
                         </div>
+                    </div>
+                    <div className='home-container'>
+                        <div className="name-tag-container">
+                            <div className="name-tag-card">
+                                <div className="name-tag-front">
+                                    <div className="name-tag-header">Hello my name is</div>
+                                    <p>CHLOE</p>
+                                </div>
 
+                                <div className="name-tag-back">
+                                    <img src={laptopImg}></img>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div id='experience' className='experience'>
                         <h1>/experience</h1>
-                        
-                        <Box sx={{ width: '100%', borderBottom: 1, borderColor: 'divider' }}>
-                            <Tabs
-                                value={value}
-                                onChange={handleChange}
-                                centered
-                                sx={{
-                                    '& .MuiTab-root': {
-                                        textTransform: 'none',
-                                        fontSize: '1rem',
-                                        padding: '6px 12px',
-                                    },
-                                    '& .Mui-selected': {
-                                        color: '#55755b !important', 
-                                        fontWeight: 'bold',
-                                    },
-                                    '& .MuiTabs-indicator': {
-                                        backgroundColor: '#55755b', 
-                                    },
-                                }}
-                            >
-                                <Tab label="Amazon" />
-                                <Tab label="McGill University" />
-                                <Tab label="Royal Victoria Hospital" />
-                                <Tab label="McGill Biomechanics" />
-                                <Tab label="MSBN Consulting" />
-                            </Tabs>
-                            <Box sx={{ padding: 3 }} className='tab-content'>
-                                {value === 0 && <div>
-                                    <h2>Software Development Engineer Intern</h2>
-                                    <h3>Summer 2024</h3>
-                                    <p>
-                                        At Amazon, I developed a <strong>full-stack platform</strong> for the <strong>Ordering Accounting team</strong>--used by over 100 Amazon engineers--that automated the execution of a service to
-                                        redrive accounting workflows triggered by financially significant events. 
-                                        This included building a <strong>responsive React website</strong> from scratch and integrating other financial services into the backend to seamlessly handle accounting events.
-                                        I contributed to CI/CD pipelines for efficient deployment and integration testing and to ensure rapid releases.
-                                         <br></br><br></br>
-                                         This experience allowed me to enhance both frontend and backend development skills, leveraging <strong>AWS 
-                                            Lambda, S3, DynamoDB, and EventBridge</strong>, and collaborating with cross-functional teams to create operational improvements.
-                                            Throughout the project, I followed <strong>Agile methodologies</strong>, participating in sprint activities and iterative development, 
-                                            while adhering to best practices for the <strong>full software development life cycle</strong>, including code reviews, source control, testing, and operations.
-                                </p></div>}
-                                {value === 1 && <div>
-                                    <h2>Undergraduate Course Assistant</h2>
-                                    <h3>August 2022 - December 2023</h3>
-                                    <p>
-                                        At <strong>McGill University</strong>, I served as an <strong>Undergraduate Course Assistant</strong> for an anatomy course, 
-                                        where I facilitated weekly lab sessions for a diverse group of 20 students, fostering an interactive learning environment. I also streamlined
-                                         grading and feedback processing by developing <strong>Python scripts</strong>, improving both efficiency and accuracy.
-                                        </p>
-                                    </div>}
-                                {value === 2 && <div>
-                                    <h2>Intensive Care Unit Volunteer Attendant</h2>
-                                    <h3>September 2020 - May 2023</h3>
-                                    <p>
-                                    As an <strong>ICU Volunteer Attendant</strong> at the <strong>Royal Victoria Hospital</strong>, I provided support to over 100 visitors, patients, and healthcare staff in the ICU on a weekly basis. My responsibilities included greeting and escorting visitors around the ICU, ensuring their comfort, and keeping track of more than 30 patients using the <strong>ICU patient log</strong>. 
-                                    This experience honed my communication and organizational skills, allowing me to assist healthcare teams while maintaining a calm and supportive environment for patients and their families.
-                                    </p>
-                                </div>}
-                                {value === 3 && (
-                                    <div>
-                                    <h2>Software Developer</h2>
-                                    <h3>September 2024 - Present</h3>
-                                    <p>
-                                    As a <strong>Software Developer</strong> at the <strong>McGill Biomechanics Club</strong>,
-                                     I developed a <strong>full-stack platform</strong> that serves as a user portal for both patients 
-                                     and doctors. The platform integrates real-time sensor EMG data to display results in a  <strong>user-friendly</strong> way and support exoskeleton testing for tremor suppression and tremor monitoring. This system enables patients and healthcare professionals to track 
-                                    muscle activity, analyze trends, and monitor progress in a clear, accessible format. I worked on both the frontend 
-                                     and backend to ensure seamless integration and a smooth user experience.
-                                     <br></br><br></br>
-                                     I was involved in the <strong>full software development life cycle</strong>, including design, development, 
-                                     testing, and deployment. This included gathering requirements, creating technical designs, implementing both 
-                                     frontend and backend features, conducting code reviews, and ensuring the platform’s scalability. I also worked 
-                                     on optimizing real-time data processing and enhancing user experience, ensuring that both patients and doctors could easily access and interpret critical health data.
-
-                                    </p>
+                        <Box className ="tab-content-container" sx={{ width: '100%', borderBottom: 1, borderColor: 'divider' }}>
+                            {isMobile ? (
+                                <div className="arrow-navigation">
+                                    <div className="arrow-header">
+                                        <IconButton className="arrow" onClick={handlePrev}>
+                                            <ArrowBackIosIcon />
+                                        </IconButton>
+                                        <IconButton className="arrow" onClick={handleNext}>
+                                            <ArrowForwardIosIcon />
+                                        </IconButton>
+                                    </div>
+                                    <Box sx={{ padding: 3 }} className='tab-content'>
+                                        {value === 0 && (
+                                            <div>
+                                                <h2>Software Development Engineer Intern</h2>
+                                                <h3>Summer 2024</h3>
+                                                <p>
+                                                    At Amazon, I developed a <strong>full-stack platform</strong> for the <strong>Ordering Accounting team</strong>--used by over 100 Amazon engineers--that automated the execution of a service to
+                                                    redrive accounting workflows triggered by financially significant events. This included building a <strong>responsive React website</strong> from scratch and integrating other financial services into the backend to seamlessly handle accounting events.
+                                                    I contributed to CI/CD pipelines for efficient deployment and integration testing and to ensure rapid releases.
+                                                    <br /><br />
+                                                    This experience allowed me to enhance both frontend and backend development skills, leveraging <strong>AWS Lambda, S3, DynamoDB, and EventBridge</strong>, and collaborating with cross-functional teams to create operational improvements. Throughout the project, I followed <strong>Agile methodologies</strong>, participating in sprint activities and iterative development, while adhering to best practices for the <strong>full software development life cycle</strong>, including code reviews, source control, testing, and operations.
+                                                </p>
+                                            </div>
+                                        )}
+                                        {value === 1 && (
+                                            <div>
+                                                <h2>Undergraduate Course Assistant</h2>
+                                                <h3>August 2022 - December 2023</h3>
+                                                <p>
+                                                    At <strong>McGill University</strong>, I served as an <strong>Undergraduate Course Assistant</strong> for an anatomy course, where I facilitated weekly lab sessions for a diverse group of 20 students, fostering an interactive learning environment. I also streamlined grading and feedback processing by developing <strong>Python scripts</strong>, improving both efficiency and accuracy.
+                                                </p>
+                                            </div>
+                                        )}
+                                        {value === 2 && (
+                                            <div>
+                                                <h2>Intensive Care Unit Volunteer Attendant</h2>
+                                                <h3>September 2020 - May 2023</h3>
+                                                <p>
+                                                    As an <strong>ICU Volunteer Attendant</strong> at the <strong>Royal Victoria Hospital</strong>, I provided support to over 100 visitors, patients, and healthcare staff in the ICU on a weekly basis. My responsibilities included greeting and escorting visitors around the ICU, ensuring their comfort, and keeping track of more than 30 patients using the <strong>ICU patient log</strong>. This experience honed my communication and organizational skills, allowing me to assist healthcare teams while maintaining a calm and supportive environment for patients and their families.
+                                                </p>
+                                            </div>
+                                        )}
+                                        {value === 3 && (
+                                            <div>
+                                                <h2>Software Developer</h2>
+                                                <h3>September 2024 - Present</h3>
+                                                <p>
+                                                    As a <strong>Software Developer</strong> at the <strong>McGill Biomechanics Club</strong>, I developed a <strong>full-stack platform</strong> that serves as a user portal for both patients and doctors. The platform integrates real-time sensor EMG data to display results in a <strong>user-friendly</strong> way and support exoskeleton testing for tremor suppression and monitoring. This system enables patients and healthcare professionals to track muscle activity, analyze trends, and monitor progress in a clear, accessible format.
+                                                    <br /><br />
+                                                    I was involved in the <strong>full software development life cycle</strong>, including design, development, testing, and deployment. This included gathering requirements, creating technical designs, implementing both frontend and backend features, conducting code reviews, and ensuring the platform’s scalability. I also worked on optimizing real-time data processing and enhancing user experience, ensuring that both patients and doctors could easily access and interpret critical health data.
+                                                </p>
+                                            </div>
+                                        )}
+                                        {value === 4 && (
+                                            <div>
+                                                <h2>Consultant</h2>
+                                                <h3>September 2023 - September 2024</h3>
+                                                <p>
+                                                    As a <strong>Consultant</strong> at the <strong>McGill Social Business Network</strong>, I provided pro-bono initiatives to develop marketing and financial strategies for a local nonprofit organization. I helped expand more than 2 consignment opportunities and organized annual conferences to boost both awareness and profitability. My role involved collaborating with the client to create sustainable growth strategies while supporting their mission.
+                                                </p>
+                                            </div>
+                                        )}
+                                    </Box>
                                 </div>
-                                    )}
-
-                                    {value === 4 && (
-                                    <div>
-                                    <h2>Consultant</h2>
-                                    <h3>September 2023 - September 2024</h3>
-                                    <p>
-                                    As a <strong>Consultant</strong> at the <strong>McGill Social Business Network</strong>, 
-                                    I provided pro-bono initiatives to develop marketing and financial strategies for a local 
-                                    nonprofit organization. I helped expand more than 2 consignment opportunities and organized annual conferences to boost both awareness and profitability. My role involved collaborating with the client to create sustainable growth strategies while supporting their mission.
-                                    </p>
-                                </div>
-                                    )}
-                            </Box>
+                            ) : (
+                                    <Tabs
+                                        value={value}
+                                        onChange={handleChange}
+                                        centered
+                                        sx={{
+                                            '& .MuiTab-root': {
+                                                textTransform: 'none',
+                                                fontSize: '1rem',
+                                                padding: '6px 12px',
+                                            },
+                                            '& .Mui-selected': {
+                                                color: '#55755b !important',
+                                                fontWeight: 'bold',
+                                            },
+                                            '& .MuiTabs-indicator': {
+                                                backgroundColor: '#55755b',
+                                            },
+                                        }}
+                                    >
+                                        <Tab label="Amazon" />
+                                        <Tab label="McGill University" />
+                                        <Tab label="Royal Victoria Hospital" />
+                                        <Tab label="McGill Biomechanics" />
+                                        <Tab label="MSBN Consulting" />
+                                    </Tabs>
+                                )}
                             </Box>
                     </div>
                     <div id="projects" className={`projects`}>

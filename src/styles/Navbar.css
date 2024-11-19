@@ -41,3 +41,26 @@
 .icons a {
     margin: 0 6px; 
 }
+
+@media (max-width: 768px) {
+    #navbar ul {
+        flex-direction: column;
+    }
+
+    .nav-open {
+        background-color: rgba(251, 251, 251, 0.946) !important; 
+    }
+
+    .icons {
+        margin-top: -35px;
+        padding-bottom: 6px;
+    }
+
+    .burger {
+        scale: 0.8;
+        color: #55755b;
+        margin-top: 8px;
+        margin-left: -15px;
+        padding-bottom: 0px;
+    }
+}
