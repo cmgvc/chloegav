@@ -218,7 +218,36 @@ function Home() {
                                             <ArrowForwardIosIcon />
                                         </IconButton>
                                     </div>
-                                    <Box sx={{ padding: 3 }} className='tab-content'>
+                                    
+                                </div>
+                            ) : (
+                                    <Tabs
+                                        value={value}
+                                        onChange={handleChange}
+                                        centered
+                                        sx={{
+                                            '& .MuiTab-root': {
+                                                textTransform: 'none',
+                                                fontSize: '1rem',
+                                                padding: '6px 12px',
+                                            },
+                                            '& .Mui-selected': {
+                                                color: '#55755b !important',
+                                                fontWeight: 'bold',
+                                            },
+                                            '& .MuiTabs-indicator': {
+                                                backgroundColor: '#55755b',
+                                            },
+                                        }}
+                                    >
+                                        <Tab label="Amazon" />
+                                        <Tab label="McGill University" />
+                                        <Tab label="Royal Victoria Hospital" />
+                                        <Tab label="McGill Biomechanics" />
+                                        <Tab label="MSBN Consulting" />
+                                    </Tabs>
+                                )}
+                                <Box sx={{ padding: 3 }} className='tab-content'>
                                         {value === 0 && (
                                             <div>
                                                 <h2>Software Development Engineer Intern</h2>
@@ -271,34 +300,6 @@ function Home() {
                                             </div>
                                         )}
                                     </Box>
-                                </div>
-                            ) : (
-                                    <Tabs
-                                        value={value}
-                                        onChange={handleChange}
-                                        centered
-                                        sx={{
-                                            '& .MuiTab-root': {
-                                                textTransform: 'none',
-                                                fontSize: '1rem',
-                                                padding: '6px 12px',
-                                            },
-                                            '& .Mui-selected': {
-                                                color: '#55755b !important',
-                                                fontWeight: 'bold',
-                                            },
-                                            '& .MuiTabs-indicator': {
-                                                backgroundColor: '#55755b',
-                                            },
-                                        }}
-                                    >
-                                        <Tab label="Amazon" />
-                                        <Tab label="McGill University" />
-                                        <Tab label="Royal Victoria Hospital" />
-                                        <Tab label="McGill Biomechanics" />
-                                        <Tab label="MSBN Consulting" />
-                                    </Tabs>
-                                )}
                             </Box>
                     </div>
                     <div id="projects" className={`projects`}>
