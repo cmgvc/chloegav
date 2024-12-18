@@ -8,6 +8,11 @@
   src: url('./assets/RoobertTRIAL-Regular-BF67243fd53fdf2.otf') format('opentype');
 }
 
+/* @font-face {
+  font-family: 'CustomFont2';
+  src: url('./assets/Napzer-Regular-BF656d4871ba43c.otf') format('opentype');
+} */
+
 @font-face {
   font-family: 'NameTagFont';
   src: url('./assets/VibrantHandmark-Yzpza.otf') format('opentype');
