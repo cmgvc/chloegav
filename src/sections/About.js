@@ -34,7 +34,7 @@ function About() {
                 </ul>
             </div>
             <p> 
-                Some of my hobbies outside of tech include swimming, reading, finding new music, and learning about cars. 
+                Some of my hobbies outside of tech include swimming, reading, finding new music, and learning about car mechanics. 
             </p>
             <div className="fun-fact-box">
                 <p className="initial-text"><strong>Fun fact</strong></p>

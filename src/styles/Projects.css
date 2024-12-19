@@ -1,10 +1,14 @@
 .projects {
     color: #55755b;
-    margin-left: 10rem;
-    margin-right: 10rem;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 3rem;
     animation: fadeIn 1.5s forwards;
-    transform: translateY(30px); 
+    transform: translateY(30px);
+}
+
+.projects h1 {
+    margin-left: 6%;
 }
 
 .projects p {
@@ -14,24 +18,41 @@
     color: rgb(93, 93, 93);
 }
 
-.project-cards {
+.project-cards-container {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.expanded-project {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 8rem;
 }
 
 .project-card {
-    width: 300px;
+    max-width: 250px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    padding: 20px;
-    margin: 20px;
+    padding: 25px;
+    margin: 15px;
+    padding-left: 3rem;
+    padding-right: 3rem;
     text-align: center;
     background-color: #eeeeee;
+    transition: transform 0.3s ease, width 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.project-card h4 {
-    margin-top: -10px;
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card h3 {
     color: rgb(147, 159, 145);
 }
 
@@ -44,7 +65,173 @@
     color: #55755b;
 }
 
-.project-card:hover {
-    transform: scale(1.05);
-    transition: all 0.3s ease;
+.project-card.expanded {
+    width: 70%;  
+    max-width: none;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    justify-content: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card .tech-stack ul {
+    list-style-type: none;
+    padding: 0;  
+}
+
+.project-card .tech-stack ul li {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    background-color: #c0c0c0;
+    border-radius: 10px;
+    color: white;
+    padding: 8px 8px;
+}
+
+.tech-stack {
+    justify-content: center;
+}
+
+.tech-stack ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 9px;
+    list-style: none;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.tech-stack li {
+    cursor: default;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-stack li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.project-card .show-more-btn {
+    margin-top: 10px;
+    background-color: #55755b;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project-card .show-more-btn:hover {
+    background-color: #7e9282;
+}
+
+.project-links {
+    display: flex;
+}
+
+
+.back-btn {
+    background: #55755b;
+    border-radius: 40px;
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+    color: white;
+    font-size: 13px;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #829987;
+}
+
+.projects-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.project-cards-container {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    flex-wrap: wrap;
+}
+
+.nav-arrow {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-arrow:hover:not(:disabled) {
+    color: #55755b;
+}
+
+.nav-arrow:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.show-more-btn {
+    margin-bottom: 10px;
+    background: #55755b;
+    border-radius: 40px;
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+    color: white;
+    font-size: 13px;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.show-more-btn:hover {
+    background-color: #829987;
+}
+
+@media (max-width: 1200px) {
+    .project-card {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 1000px) {
+    .projects-carousel {
+        display: none;
+    }
+
+    .project-cards-container-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .project-cards-container-mobile .project-card {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    .project-card {
+        width: 90%;
+        margin: 10px 0;
+    }
 }
