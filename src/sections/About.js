@@ -3,12 +3,15 @@ import React from 'react';
 function About() {
     const technologiesCol1 = [
         'Python', 'Java', 'JavaScript', 'React.js', 
-        'Node.js', 'Three.js', 'Next.js', 'C'
+        'Node.js', 'Three.js', 'Next.js', 'C', 
     ];
 
     const technologiesCol2 = [
-        'HTML/CSS', 'OCaml', 'AWS (Lambda, EventBridge, DynamoDB, S3, IAM)', 
-        'SQL', 'NoSQL (MongoDB)', 'Git', 'Express', 'Flask'
+        'HTML/CSS', 'OCaml','SQL', 'NoSQL (MongoDB)', 'AWS (Lambda, EventBridge, DynamoDB, S3, IAM)', 
+        'Git', 'Express', 'Flask'
+    ];
+    const technologiesCol3 = [
+        'Docker', 'Kubernetes', 'Postman', 'CI/CD', 'Agile', 'TensorFlow', 'PyTorch','Figma'
     ];
 
     return (
@@ -29,6 +32,11 @@ function About() {
                 </ul>
                 <ul className="hover-list">
                     {technologiesCol2.map((tech, index) => (
+                        <li key={index}>{tech}</li>
+                    ))}
+                </ul>
+                <ul className="hover-list">
+                    {technologiesCol3.map((tech, index) => (
                         <li key={index}>{tech}</li>
                     ))}
                 </ul>
