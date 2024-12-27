@@ -5,6 +5,8 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 function Projects() {
+    const [modalOpen, setModalOpen] = useState(false);
+    const [modalContent, setModalContent] = useState([]);
     const projects = [
         {
             title: "We Are Fit AI-Powered Application",
@@ -99,6 +101,41 @@ function Projects() {
             ],
             liveLink: "https://chloegav.vercel.app/",
             githubLink: "https://github.com/cmgvc/chloegav"
+        },
+        {
+            title: "Content Management System",
+            date: "December 2024",
+            description: "Developed a content management platform enabling non-technical users to easily add, edit, and organize data in their personal portfolio, with a sleek and responsive user interface.",
+            techStack: [
+                "React.js",
+                "Node.js",
+                "PostgreSQL",
+                "HTML",
+                "CSS",
+                "Vercel",
+                "Render"
+            ],
+            liveLink: "https://gaurav-cms.vercel.app/",
+            githubLink: "https://github.com/cmgvc/portfolio-cms"
+        },
+        {
+            title: "Freelance Web Development for Clients",
+            date: "Ongoing",
+            description: "Designed and developed responsive websites tailored to the unique needs of small businesses and individuals. Focused on creating user-friendly, visually appealing, and functional websites to help clients establish their online presence. Projects range from portfolio websites to e-commerce platforms, always with a focus on delivering results and client satisfaction.",
+            techStack: [
+                "React.js",
+                "Node.js",
+                "PostgreSQL",
+                "MongoDB",
+                "HTML",
+                "CSS",
+                "Vercel",
+                "Render"
+            ],
+            exampleLinks: [
+                { label: "Gaurav Dogra Portfolio Website", url: "https://gauravdogra.vercel.app/" },
+            ],
+            githubLink: "https://github.com/cmgvc"
         }
         
     ];
@@ -134,6 +171,16 @@ function Projects() {
 
     const handleCollapseProject = () => {
         setExpandedProjectIndex(null);
+    };
+
+    const openModal = (exampleLinks) => {
+        setModalContent(exampleLinks);
+        setModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setModalOpen(false);
+        setModalContent([]);
     };
 
     const renderProjects = () => {
@@ -204,16 +251,20 @@ function Projects() {
                                 Show More
                             </button>
                             <div className="project-links">
-                                {project.liveLink && (
-                                <a href={project.liveLink} target="_blank" rel="noreferrer">
-                                    Visit Live
-                                </a>
-                                )}
-                                {project.githubLink && (
-                                    <a href={project.githubLink} target="_blank" rel="noreferrer">
-                                        <GitHub />
-                                    </a>
-                                )}
+                                {project.exampleLinks ? (
+                                <button onClick={() => openModal(project.exampleLinks)}>
+                                    View Examples
+                                </button>
+                                    ) : project.liveLink ? (
+                                        <a href={project.liveLink} target="_blank" rel="noreferrer">
+                                            Visit Live
+                                        </a>
+                                    ) : null}
+                                    {project.githubLink && (
+                                        <a href={project.githubLink} target="_blank" rel="noreferrer">
+                                            <GitHub />
+                                        </a>
+                                    )}
                             </div>
                         </div>
                     ))}
@@ -233,6 +284,21 @@ function Projects() {
         <div id="projects" className="projects">
             <h1>/projects</h1>
             {renderProjects()}
+            {modalOpen && (
+                <div className="modal-overlay" onClick={closeModal}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <h2>Example Links</h2>
+                            {modalContent.map((example, index) => (
+                                <p key={index}>
+                                    <a href={example.url} target="_blank" rel="noreferrer">
+                                        {example.label}
+                                    </a>
+                                </p>
+                            ))}
+                        <button onClick={closeModal}>Close</button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

@@ -200,6 +200,41 @@
     background-color: #829987;
 }
 
+.project-links button {
+    border-radius: 40px;
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+    color: #55755b;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    margin-top: 1vh;
+    transition: color 0.3s ease;
+}
+
+.project-links button:hover {
+    color: #829987;
+}
+
+.modal-content {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.modal-content button {
+    background: #55755b;
+    border-radius: 40px;
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
 @media (max-width: 1200px) {
     .project-card {
         width: calc(50% - 40px);
