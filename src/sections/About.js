@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 function About() {
     const technologiesCol1 = [
@@ -12,6 +12,14 @@ function About() {
     ];
     const technologiesCol3 = [
         'Docker', 'Kubernetes', 'Postman', 'CI/CD', 'Agile', 'TensorFlow', 'PyTorch','Figma'
+    ];
+
+    const hobbies = [
+        { id: 1, icon: "🏊‍♀️", name: "Swimming", details: "Competitive synchronized swimmer for 12 years." },
+        { id: 1, icon: "🥊", name: "Boxing", details: "Competitive synchronized swimmer for 12 years." },
+        { id: 2, icon: "📖", name: "Reading", details: "Exploring everything from tech to fiction novels." },
+        { id: 3, icon: "🎧", name: "DJ", details: "Finding new genres and playlists." },
+        { id: 4, icon: "🚗", name: "Car Mechanics", details: "Learning about engines and DIY repairs." },
     ];
 
     return (
@@ -44,6 +52,20 @@ function About() {
             <p> 
                 Some of my hobbies outside of tech include swimming, reading, finding new music, and learning about car mechanics. 
             </p>
+            <p> 
+                This year, I've also taken up boxing, which has been a great way to stay active and relieve stress. Additionally, I’ve been diving into DJing, discovering new genres, and curating playlists.
+            </p>
+            <div className="hobbies-grid">
+                {hobbies.map((hobby) => (
+                    <div
+                        key={hobby.id}
+                        className="hobby-card"
+                    >
+                        <div className="hobby-icon">{hobby.icon}</div>
+                        <div className="hobby-name">{hobby.name}</div>
+                    </div>
+                ))}
+            </div>
             <div className="fun-fact-box">
                 <p className="initial-text"><strong>Fun fact</strong></p>
                 <p className="fun-fact-text">I was a high performance synchronized swimmer for 12 years and represented Canada at the Junior Pan American Games in 2019!</p>
